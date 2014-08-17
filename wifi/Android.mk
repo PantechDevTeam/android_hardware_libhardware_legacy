@@ -42,6 +42,10 @@ endif
 
 LOCAL_SRC_FILES += wifi/wifi.c
 
+ifeq ($(BOARD_HAVE_PRESTO_WIFI),true)
+LOCAL_CFLAGS += -DPRESTO_WIFI
+endif
+
 ifeq ($(BOARD_HAVE_SAMSUNG_WIFI),true)
 LOCAL_CFLAGS += -DSAMSUNG_WIFI
 endif
